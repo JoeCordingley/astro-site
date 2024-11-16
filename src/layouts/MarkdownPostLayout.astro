@@ -1,6 +1,10 @@
 ---
-const { frontmatter } = Astro.props;
+import type { Frontmatter } from '../pages/posts/Frontmatter.ts'
+interface Props {
+  frontmatter: Frontmatter;
+}
 import BaseLayout from '../layouts/BaseLayout.astro'
+const {frontmatter} = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
     <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
