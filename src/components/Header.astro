@@ -1,12 +1,17 @@
 ---
+import Title from './Title.astro'
 import Navigation from './Navigation.astro'
 import Hamburger from './Hamburger.astro'
 import ThemeIcon from './ThemeIcon.astro'
 ---
-<header>
-  <nav>
-    <Hamburger/>
+<header class="flex items-center justify-between px-4 py-2 dark:bg-gray-800">
+  <div class="flex-shrink-0 truncate">
+    <Title />
+  </div>
+  <nav class="flex items-center gap-4">
+    <Hamburger />
+    <Navigation />
     <ThemeIcon />
-    <Navigation/>
   </nav>
 </header>
+
